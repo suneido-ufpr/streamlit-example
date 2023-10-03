@@ -17,14 +17,22 @@ st.set_page_config(
     }
 )
 
-with st.sidebar:
-    my_component(greeting="hello")
-    
+st.help(st.sidebar.selectbox)
+
+#st.sidebar.selectbox("streamlit app", on_click=st.warning('This is a warning', icon="⚠️"), args=["home"])
+
+#st.warning('This is a warning', icon="⚠️")
+
+#selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+#page_names_to_funcs[selected_page]()
+
+#st.write("This is my new page!")
+
 #def my_new_page():
 #    st.write("This is my new page!")
 
 st.sidebar.markdown("# Pages")
-# st.sidebar.button("streamlit app", on_click=st.session_state.set, args=["home"])
+# st.sidebar.selectbox("streamlit app", on_click=st.session_state.set, args=["home"])
 # st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
 
 # if st.session_state.get("page") == "my_new_page":
