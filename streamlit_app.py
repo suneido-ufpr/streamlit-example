@@ -30,7 +30,6 @@ if st.session_state.get("page") == "my_new_page":
 
 #st.write(option)
 
-
 if st.sidebar.selectbox('streamlit appx', True):
     st.write("streamlit app")
 else:
