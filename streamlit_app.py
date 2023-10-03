@@ -13,7 +13,7 @@ st.set_page_config(
     layout="wide",
     initial_sidebar_state="expanded",
     menu_items={
-        'About': "# This is a header. This is an *extremely* cool app!"
+        "About": "# This is a header. This is an *extremely* cool app!"
     }
 )
 
