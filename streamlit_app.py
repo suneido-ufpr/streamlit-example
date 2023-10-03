@@ -17,8 +17,7 @@ st.sidebar.markdown("# Pages")
 #    my_new_page()
 
 
-
-st.markdown(st.session_state.get("streamlit_app"))
+st.write(st.session_state.key)
 
 
 """
