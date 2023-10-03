@@ -3,6 +3,9 @@ import streamlit as st
 def my_new_page():
     st.write("This is my new page!")
 
+st.session_state.key = 'my_new_page'
+
+st.write(st.session_state.key)
 
 st.write(st.session_state.get("page"))
 
