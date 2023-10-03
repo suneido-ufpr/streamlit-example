@@ -6,6 +6,17 @@ import streamlit as st
 
 st.sidebar.header("Brief overview of the Columns")
 
+with st.sidebar:
+
+	st.markdown('### Filtros de paradas')
+	with st.form(key="completez"):
+		inicio_fecha = st.date_input(label="Fecha de inicio")
+		final_fecha = st.date_input(label="Fecha final")
+		id_camion = st.selectbox(label="Seleccione un vehiculo:", options=[13, 14, 15])
+		hexagono_size = 10#st.slider(label="Tamaño de hexagonos", min_value=0, max_value=15, step=1, value=11)
+
+		estadistica = st.form_submit_button("Enviar")
+        
 # Adicionar um menu lateral à página
 #menu_items = [
 #    menu.Item("Home", page_name="home"),
