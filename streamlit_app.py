@@ -22,7 +22,7 @@ st.set_page_config(
 # if st.session_state.get("page") == "my_new_page":
 #     st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
 
-if st.sidebar.selectbox('streamlit app', True):
+if st.sidebar.selectbox("streamlit app", True):
     st.write("streamlit app")
 else:
     st.write("NOO streamlit app")
