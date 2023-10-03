@@ -28,7 +28,7 @@ with st.sidebar:
 
 		estadistica = st.form_submit_button("Enviar")
 
-st.markdown(st.session_state.get("home"))
+st.markdown(st.session_state.get("streamlit_app"))
 
 
 """
