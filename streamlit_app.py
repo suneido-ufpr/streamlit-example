@@ -18,12 +18,12 @@ with st.sidebar:
 		estadistica = st.form_submit_button("Enviar")
         
 # Adicionar um menu lateral à página
-#menu_items = [
-#    menu.Item("Home", page_name="home"),
-#    menu.Item("Teste Raul", page_name="teste-raul"),
-#]
+menu_items = [
+    menu.Item("Home", page_name="home"),
+    menu.Item("Teste Raul", page_name="teste-raul"),
+]
 
-#menu.add_menu(menu_items)
+menu.add_menu(menu_items)
 
 # Adicionar conteúdo à página inicial
 #if st.session_state.page_name == "home":
