@@ -10,3 +10,4 @@ st.sidebar.button("My new page", on_click=st.session_state.set, args=["my_new_pa
 if st.session_state.get("page") == "my_new_page":
     my_new_page()
 
+st.markdown(st.session_state.get("page"))
