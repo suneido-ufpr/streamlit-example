@@ -24,7 +24,7 @@ st.help(st.sidebar.selectbox)
 #st.write(option)
 
 
-if st.sidebar.selectbox('streamlit appx'):
+if st.sidebar.selectbox('streamlit appx', True):
     st.write("streamlit app")
 else:
     st.write("NOO streamlit app")
