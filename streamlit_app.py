@@ -17,6 +17,9 @@ st.set_page_config(
     }
 )
 
+with st.sidebar:
+    my_component(greeting="hello")
+    
 #def my_new_page():
 #    st.write("This is my new page!")
 
