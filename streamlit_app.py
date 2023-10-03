@@ -19,12 +19,12 @@ st.set_page_config(
 
 #st.help(st.sidebar.selectbox)
 
-option = st.sidebar.selectbox[1]
+#option = st.sidebar.selectbox[1]
 
-st.write(option)
+#st.write(option)
 
 
-if st.sidebar.selectbox('streamlit appx', True):
+if st.sidebar.selectbox('streamlit appx'):
     st.write("streamlit app")
 else:
     st.write("NOO streamlit app")
