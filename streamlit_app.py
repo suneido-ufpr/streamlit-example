@@ -19,8 +19,8 @@ st.set_page_config(
     }
 )
 
-def my_new_page():
-    st.write("This is my new page!")
+#def my_new_page():
+#    st.write("This is my new page!")
 
 st.sidebar.markdown("# Pages")
 # st.sidebar.button("streamlit app", on_click=st.session_state.set, args=["home"])
@@ -32,7 +32,7 @@ st.sidebar.markdown("# Pages")
 #if os.path.isfile("streamlit_app.py"):
 #    st.write("abcabcabc")
 
-st.write(os.path)
+#st.write(os.path)
 st.write(st.session_state.key)
 
 #with st.sidebar:
