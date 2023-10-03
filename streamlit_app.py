@@ -17,7 +17,7 @@ st.set_page_config(
     }
 )
 
-st.help(st.sidebar.option_menu)
+st.help(st.sidebar)
 
 #st.sidebar.selectbox("streamlit app", on_click=st.warning('This is a warning', icon="⚠️"), args=["home"])
 
