@@ -7,7 +7,7 @@ if 'my_new_page' not in st.session_state:
 def my_new_page_write():
     st.write("This is my new page!")
 
-st.sidebar.button("streamlit app", on_click=st.session_state.set, args=["home"])
+st.sidebar.button("streamlit app", on_click=st.session_state.set, args=['home'])
 st.sidebar.button("my new page", on_click=st.session_state.set, args=['my_new_page'])
 
 '''
