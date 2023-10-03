@@ -13,20 +13,10 @@ st.sidebar.markdown("# Pages")
 # st.sidebar.button("Home", on_click=st.session_state.set, args=["home"])
 # st.sidebar.button("My new page", on_click=st.session_state.set, args=["my_new_page"])
 
-if st.session_state.get("page") == "my_new_page":
-    my_new_page()
+# if st.session_state.get("page") == "my_new_page":
+#    my_new_page()
 
 
-with st.sidebar:
-
-	st.markdown('### Filtros de paradas')
-	with st.form(key="completez"):
-		inicio_fecha = st.date_input(label="Fecha de inicio")
-		final_fecha = st.date_input(label="Fecha final")
-		id_camion = st.selectbox(label="Seleccione un vehiculo:", options=[13, 14, 15])
-		hexagono_size = 10#st.slider(label="Tamaño de hexagonos", min_value=0, max_value=15, step=1, value=11)
-
-		estadistica = st.form_submit_button("Enviar")
 
 st.markdown(st.session_state.get("streamlit_app"))
 
