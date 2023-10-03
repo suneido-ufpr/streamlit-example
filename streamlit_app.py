@@ -21,7 +21,7 @@ st.set_page_config(
 
 if st.sidebar.checkbox('streamlit app', True):
     st.write("streamlit app")
-else
+else:
     st.write("NOO streamlit app")
 
 if st.sidebar.checkbox('my new page', True):
