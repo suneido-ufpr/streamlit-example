@@ -18,6 +18,8 @@ st.sidebar.button("streamlit app", on_click=st.session_state.home)
 st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
 
 
+st.session_state.my_new_page = lambda: st.write("This is my new page!")
+st.session_state.home = lambda: st.write("This is the home page!")
 
 '''
 import streamlit as st
