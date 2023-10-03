@@ -1,5 +1,27 @@
 import streamlit as st
 
+def my_new_page_write():
+    st.write("This is my new page!")
+
+def home_write():
+    st.write("This is the home page!")
+
+st.title('my_new_page x')
+
+if 'my_new_page' not in st.session_state:
+    st.session_state.my_new_page = my_new_page_write
+
+if 'home' not in st.session_state:
+    st.session_state.home = home_write
+
+st.sidebar.button("streamlit app", on_click=st.session_state.home)
+st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
+
+
+
+'''
+import streamlit as st
+
 st.title('my_new_page x')
 
 if 'my_new_page' not in st.session_state:
@@ -12,7 +34,7 @@ if 'home' not in st.session_state:
 
 st.sidebar.button("streamlit app", on_click=st.session_state.home, args=['home'])
 st.sidebar.button("my new page", on_click=st.session_state.my_new_page, args=['my_new_page'])
-
+'''
 
 
 
@@ -20,7 +42,7 @@ st.sidebar.button("my new page", on_click=st.session_state.my_new_page, args=['m
 
 def my_new_page_write():
     st.write("This is my new page!")
-    
+
 #st.write('Count = ', st.session_state.count)
 
 
