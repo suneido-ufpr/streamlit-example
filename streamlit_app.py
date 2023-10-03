@@ -4,6 +4,8 @@ import math
 import pandas as pd
 import streamlit as st
 
+st.session_state.key = 'home'
+
 def my_new_page():
     st.write("This is my new page!")
 
