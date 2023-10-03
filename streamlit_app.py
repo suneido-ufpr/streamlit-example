@@ -6,7 +6,6 @@ import streamlit as st
 
 st.session_state.key = 'home'
 
-
 st.set_page_config(
     page_title="Ex-stream-ly Cool App",
     page_icon="🧊",
@@ -17,13 +16,11 @@ st.set_page_config(
     }
 )
 
-#st.help(st.sidebar.selectbox)
+# st.help(st.sidebar.selectbox)
 
-
-#st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
-#if st.session_state.get("page") == "my_new_page":
-#    st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
-
+# st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
+# if st.session_state.get("page") == "my_new_page":
+#     st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
 
 if st.sidebar.selectbox('streamlit appx', True):
     st.write("streamlit app")
@@ -32,7 +29,6 @@ else:
 
 if st.sidebar.selectbox('my new page', True):
     st.write("my new page")
-
 
 
 #st.sidebar.selectbox("streamlit app", on_click=st.warning('This is a warning', icon="⚠️"), args=["home"])
