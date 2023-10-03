@@ -4,8 +4,6 @@ import math
 import pandas as pd
 import streamlit as st
 
-st.set_page_config(page_title="GPS Blau", layout="wide", page_icon="🛰️")
-
 st.sidebar.header("Brief overview of the Columns")
 
 with st.sidebar:
