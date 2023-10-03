@@ -19,7 +19,7 @@ st.sidebar.markdown("# Pages")
 if os.path.isfile('streamlit_app.py'):
     st.write("abcabcabc")
 
-st.write(os.path.isfile)
+st.write(os.path.isfile())
 st.write(st.session_state.key)
 
 #with st.sidebar:
