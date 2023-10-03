@@ -19,6 +19,9 @@ st.set_page_config(
 
 #st.help(st.sidebar.selectbox)
 
+st.write(st.sidebar.checkbox[1])
+
+
 if st.sidebar.checkbox('streamlit appx', True):
     st.write("streamlit app")
 else:
