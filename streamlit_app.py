@@ -19,6 +19,13 @@ st.set_page_config(
 
 st.help(st.sidebar.selectbox)
 
+
+l2=[]
+l2=st.sidebar.selectbox[:]
+	
+st.write(l2)
+
+
 #option = st.sidebar.selectbox[1]
 
 #st.write(option)
