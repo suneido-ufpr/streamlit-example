@@ -19,15 +19,15 @@ st.set_page_config(
 
 #st.help(st.sidebar.selectbox)
 
-st.write(st.sidebar.checkbox[1])
+st.write(st.sidebar.selectbox[1])
 
 
-if st.sidebar.checkbox('streamlit appx', True):
+if st.sidebar.selectbox('streamlit appx', True):
     st.write("streamlit app")
 else:
     st.write("NOO streamlit app")
 
-if st.sidebar.checkbox('my new page', True):
+if st.sidebar.selectbox('my new page', True):
     st.write("my new page")
 
 
