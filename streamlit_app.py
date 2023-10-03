@@ -20,10 +20,9 @@ st.set_page_config(
 #st.help(st.sidebar.selectbox)
 
 
-st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
-
-if st.session_state.get("page") == "my_new_page":
-    st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
+#st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
+#if st.session_state.get("page") == "my_new_page":
+#    st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
 
 
 if st.sidebar.selectbox('streamlit appx', True):
