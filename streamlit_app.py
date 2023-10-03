@@ -13,16 +13,17 @@ st.sidebar.markdown("# Pages")
 # st.sidebar.button("streamlit app", on_click=st.session_state.set, args=["home"])
 # st.sidebar.button("my new page", on_click=st.session_state.set, args=["my_new_page"])
 
-if st.session_state.get("page") == "my_new_page":
-    my_new_page()
+# if st.session_state.get("page") == "my_new_page":
+#    my_new_page()
 
 if os.path.isfile('streamlit_app.py'):
     st.write("abcabcabc")
 
+st.write(os.path.isfile)
 st.write(st.session_state.key)
 
-with st.sidebar:
-    st.[0]
+#with st.sidebar:
+#    st.[0]
 
 """
 # Welcome to Streamlit! teste raul
