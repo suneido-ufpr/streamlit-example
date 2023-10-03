@@ -14,6 +14,9 @@ if 'my_new_page' not in st.session_state:
 if 'home' not in st.session_state:
     st.session_state.home = home_write
 
+st.sidebar.markdown("streamlit app", on_click=st.session_state.home)
+st.sidebar.markdown("my new page", on_click=st.session_state.my_new_page)
+
 st.sidebar.button("streamlit app", on_click=st.session_state.home)
 st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
 
