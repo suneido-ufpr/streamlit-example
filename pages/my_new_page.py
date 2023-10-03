@@ -4,11 +4,15 @@ st.title('my_new_page x')
 
 if 'my_new_page' not in st.session_state:
     st.session_state.my_new_page = 'my_new_page'
+
+if 'home' not in st.session_state:
+    st.session_state.home = 'home'
+
 def my_new_page_write():
     st.write("This is my new page!")
 
-st.sidebar.button("streamlit app", on_click=st.session_state.my_new_page, args=['home'])
-st.sidebar.button("my new page", on_click=st.session_state.set, args=['my_new_page'])
+st.sidebar.button("streamlit app", on_click=st.session_state.home, args=['home'])
+st.sidebar.button("my new page", on_click=st.session_state.my_new_page, args=['my_new_page'])
 
 '''
 #st.write('Count = ', st.session_state.count)
