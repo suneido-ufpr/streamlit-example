@@ -21,7 +21,7 @@ st.help(st.sidebar.selectbox)
 
 
 l2=[]
-l2=st.sidebar.selectbox[:]
+l2=st.sidebar.selectbox
 	
 st.write(l2)
 
