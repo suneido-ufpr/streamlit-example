@@ -4,7 +4,7 @@ import math
 import pandas as pd
 import streamlit as st
 
-st.session_state.key = 'home'
+#st.session_state.key = 'home'
 
 st.set_page_config(
     page_title="Ex-stream-ly Cool App",
@@ -15,6 +15,27 @@ st.set_page_config(
         "About": "# This is a header. This is an *extremely* cool app!"
     }
 )
+
+def my_new_page_write():
+    st.write("This is my new page!")
+
+def home_write():
+    st.write("This is the home page!")
+
+st.title('my_new_page x')
+
+if 'my_new_page' not in st.session_state:
+    st.session_state.my_new_page = my_new_page_write
+
+if 'home' not in st.session_state:
+    st.session_state.home = home_write
+
+st.sidebar.button("streamlit app", on_click=st.session_state.home)
+st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
+
+
+st.session_state.my_new_page = lambda: st.write("This is my new page!")
+st.session_state.home = lambda: st.write("This is the home page!")
 
 # st.help(st.sidebar.selectbox)
 
