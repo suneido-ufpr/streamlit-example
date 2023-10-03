@@ -20,7 +20,7 @@ if st.session_state.get("page") == "my_new_page":
 st.write(st.session_state.key)
 
 with st.sidebar:
-    st.[button]
+    st
 
 """
 # Welcome to Streamlit! teste raul
