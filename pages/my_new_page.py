@@ -11,7 +11,7 @@ st.write(st.session_state.get("page"))
 
 # st.sidebar.markdown("# Pages")
 st.sidebar.button("streamlit app", on_click=st.session_state.key, args=["home"])
-st.sidebar.button("My new page", on_click=st.session_state.set, args=["my_new_page"])
+st.sidebar.button("my new page", on_click=st.session_state.key, args=["my_new_page"])
 # st.sidebar.button("My new page", on_click=st.session_state.set, args=["my_new_page"])
 
 #if st.session_state.get("page") == "my_new_page":
