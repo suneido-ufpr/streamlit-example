@@ -3,13 +3,8 @@ import altair as alt
 import math
 import pandas as pd
 import streamlit as st
-from streamlit_option_menu import option_menu
 
-# 1. as sidebar menu
-with st.sidebar:
-    selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
-    selected
+st.sidebar.header("Brief overview of the Columns")
 
 # Adicionar um menu lateral à página
 #menu_items = [
