@@ -19,7 +19,7 @@ st.set_page_config(
 
 #st.help(st.sidebar.selectbox)
 
-option = st.sidebar.selectbox
+option = st.sidebar.selectbox[1]
 
 st.write(option)
 
