@@ -8,11 +8,8 @@ if 'my_new_page' not in st.session_state:
 if 'home' not in st.session_state:
     st.session_state.home = 'home'
 
-# Adiciona um evento on_click ao item de menu "My new page"
-st.sidebar.session_state_submit(
-    "my_new_page",
-    on_click=st.session_state.my_new_page,
-)
+# Adiciona um link para a página "My new page" ao menu lateral
+st.sidebar.write(f"**[My new page](?page=my_new_page)**")
 
 # Cria o menu
 st.sidebar.markdown("# Pages")
