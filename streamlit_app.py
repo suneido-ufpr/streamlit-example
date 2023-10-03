@@ -17,7 +17,7 @@ st.set_page_config(
     }
 )
 
-#st.help(st.sidebar.selectbox)
+st.help(st.sidebar.selectbox)
 
 #option = st.sidebar.selectbox[1]
 
