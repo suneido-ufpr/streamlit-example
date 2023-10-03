@@ -19,7 +19,9 @@ st.set_page_config(
 
 #st.help(st.sidebar.selectbox)
 
-st.write(st.sidebar.selectbox)
+option = st.sidebar.selectbox
+
+st.write(option)
 
 
 if st.sidebar.selectbox('streamlit appx', True):
