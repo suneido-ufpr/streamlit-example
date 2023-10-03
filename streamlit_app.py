@@ -22,13 +22,13 @@ st.set_page_config(
 # if st.session_state.get("page") == "my_new_page":
 #     st.write("xxxxxxxxxxxxxxxxxxxxxxxxx")
 
-if st.sidebar.selectbox("streamlit app", 1):
-    st.write("streamlit app")
-else:
-    st.write("NOO streamlit app")
-
-if st.sidebar.selectbox('my new page', True):
-    st.write("my new page")
+#if st.sidebar.selectbox("streamlit app", True):
+#    st.write("streamlit app")
+#else:
+#    st.write("NOO streamlit app")
+#
+#if st.sidebar.selectbox('my new page', True):
+#    st.write("my new page")
 
 
 #st.sidebar.selectbox("streamlit app", on_click=st.warning('This is a warning', icon="⚠️"), args=["home"])
