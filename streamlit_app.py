@@ -16,8 +16,8 @@ st.sidebar.markdown("# Pages")
 # if st.session_state.get("page") == "my_new_page":
 #    my_new_page()
 
-if os.path.isfile("streamlit_app.py"):
-    st.write("abcabcabc")
+#if os.path.isfile("streamlit_app.py"):
+#    st.write("abcabcabc")
 
 st.write(os.path.isfile())
 st.write(st.session_state.key)
