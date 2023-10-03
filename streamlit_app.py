@@ -1,3 +1,11 @@
+import streamlit as st
+
+st.header("Main Page")
+st.slider("x")
+
+
+
+'''
 from collections import namedtuple
 import altair as alt
 import math
@@ -36,6 +44,8 @@ st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
 
 st.session_state.my_new_page = lambda: st.write("This is my new page!")
 st.session_state.home = lambda: st.write("This is the home page!")
+'''
+
 
 # st.help(st.sidebar.selectbox)
 
