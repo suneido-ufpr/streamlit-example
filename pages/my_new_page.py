@@ -1,12 +1,23 @@
 import streamlit as st
 
+def my_new_page_write():
+    st.write("This is my new page!")
+
+def home_write():
+    st.write("This is the home page!")
+
 st.title('my_new_page x')
 
-st.session_state.my_new_page = lambda: st.write("This is my new page!")
-st.session_state.home = lambda: st.write("This is the home page!")
+if 'my_new_page' not in st.session_state:
+    st.session_state.my_new_page = my_new_page_write
+
+if 'home' not in st.session_state:
+    st.session_state.home = home_write
 
 st.sidebar.button("streamlit app", on_click=st.session_state.home)
 st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
+
+
 
 '''
 import streamlit as st
