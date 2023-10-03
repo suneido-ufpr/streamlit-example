@@ -16,13 +16,7 @@ with st.sidebar:
 		hexagono_size = 10#st.slider(label="Tamaño de hexagonos", min_value=0, max_value=15, step=1, value=11)
 
 		estadistica = st.form_submit_button("Enviar")
-        
 
-# Adicionar conteúdo à página inicial
-if st.session_state.page_name == "home":
-	"""
- 	xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-	"""
 
 """
 # Welcome to Streamlit! teste raul
