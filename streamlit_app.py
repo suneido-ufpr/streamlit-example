@@ -17,7 +17,13 @@ st.set_page_config(
     }
 )
 
-st.help(st.sidebar.selectbox)
+#st.help(st.sidebar.selectbox)
+
+if st.sidebar.checkbox('streamlit app', True):
+    st.write("streamlit app")
+
+if st.sidebar.checkbox('my new page', True):
+    st.write("my new page")
 
 
 
