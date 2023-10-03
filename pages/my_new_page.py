@@ -1,28 +1,23 @@
 import streamlit as st
 
-def my_new_page_write():
-    st.write("This is my new page!")
-
-def home_write():
-    st.write("This is the home page!")
-
 st.title('my_new_page x')
 
 if 'my_new_page' not in st.session_state:
-    st.session_state.my_new_page = my_new_page_write
+    st.session_state.my_new_page = 'my_new_page'
 
 if 'home' not in st.session_state:
-    st.session_state.home = home_write
+    st.session_state.home = 'home'
 
-st.sidebar.selectbox("streamlit app", on_click=st.session_state.home)
-st.sidebar.selectbox("my new page", on_click=st.session_state.my_new_page)
+# Adiciona um evento on_click ao item de menu "My new page"
+st.sidebar.session_state_submit(
+    "my_new_page",
+    on_click=st.session_state.my_new_page,
+)
 
+# Cria o menu
+st.sidebar.markdown("# Pages")
 st.sidebar.button("streamlit app", on_click=st.session_state.home)
-st.sidebar.button("my new page", on_click=st.session_state.my_new_page)
-
-
-st.session_state.my_new_page = lambda: st.write("This is my new page!")
-st.session_state.home = lambda: st.write("This is the home page!")
+st.sidebar.button("my new page")
 
 '''
 import streamlit as st
