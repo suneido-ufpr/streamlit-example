@@ -4,16 +4,16 @@ import math
 import pandas as pd
 import streamlit as st
 
-def my_home():
+def home():
 	st.sidebar.header("Brief overview of the Columns")
 	st.write("This is my home!")
 
 st.sidebar.markdown("# Pages")
 st.sidebar.button("Home", on_click=st.session_state.set, args=["home"])
-st.sidebar.button("My home", on_click=st.session_state.set, args=["my_home"])
+st.sidebar.button("My new page", on_click=st.session_state.set, args=["my_new_page"])
 
-if st.session_state.get("page") == "my_home":
-    my_home()
+if st.session_state.get("page") == "home":
+    home()
 
 
 
