@@ -11,7 +11,7 @@ import pandas as pd
 # Carrega os dados do arquivo CSV
 @st.cache
 def load_data():
-    data = pd.read_csv('seuarquivo.csv')
+    data = pd.read_csv('2020.csv')
     return data
 
 data = load_data()
