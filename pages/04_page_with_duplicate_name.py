@@ -11,7 +11,7 @@ import pandas as pd
 # Carrega os dados do arquivo CSV
 @st.cache
 def load_data():
-    data = pd.read_csv('2020.csv')
+    data = pd.read_csv('seuarquivo.csv')
     return data
 
 data = load_data()
@@ -32,7 +32,9 @@ st.markdown(
 
 # Filtros
 st.header('Filtros')
-col1, col2, col3, col4 = st.beta_columns(4)
+
+# Divide o espaço horizontal em quatro colunas
+col1, col2, col3, col4 = st.columns(4)
 
 # Filtro por Classificação
 with col1:
