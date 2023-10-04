@@ -66,13 +66,15 @@ st.header('Porcentagens de Cores dos Produtos')
 color_percentage = filtered_data['product_color'].value_counts() / len(filtered_data) * 100
 
 # Configurações de estilo para o gráfico
-plt.figure(figsize=(10, 6))
-sns.barplot(x=color_percentage.index, y=color_percentage.values, palette='viridis')
-plt.xticks(rotation=45)
-plt.xlabel('Cor do Produto')
-plt.ylabel('Porcentagem')
-plt.title('Porcentagens de Cores dos Produtos')
-st.pyplot()
+fig, ax = plt.subplots(figsize=(10, 6))
+sns.barplot(x=color_percentage.index, y=color_percentage.values, palette='viridis', ax=ax)
+ax.set_xticklabels(ax.get_xticklabels(), rotation=45)
+ax.set_xlabel('Cor do Produto')
+ax.set_ylabel('Porcentagem')
+ax.set_title('Porcentagens de Cores dos Produtos')
+
+# Exibir o gráfico usando st.pyplot()
+st.pyplot(fig)
 
 
 
@@ -83,6 +85,23 @@ st.pyplot()
 
 
 '''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import streamlit as st
 import pandas as pd
 
