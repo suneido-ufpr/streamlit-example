@@ -32,6 +32,12 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Botão para limpar todos os filtros
+if st.button('Limpar Filtros'):
+    filtered_data = data
+    min_rating, selected_color, selected_shipping_option, min_inventory = 0.0, None, None, 0
+
+
 # Filtros
 st.header('Filtros')
 
