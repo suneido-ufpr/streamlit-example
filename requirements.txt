@@ -2,5 +2,7 @@ altair
 pandas
 streamlit
 matplotlib
+pyplot
+matplotlib.pyplot
 plotly
 seaborn
