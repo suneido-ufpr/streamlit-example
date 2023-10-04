@@ -5,6 +5,7 @@ st.header("Page 4")
 '''
 
 
+
 import streamlit as st
 import pandas as pd
 
@@ -38,7 +39,7 @@ col1, col2, col3, col4 = st.columns(4)
 
 # Filtro por Classificação
 with col1:
-    min_rating = st.slider('Classificação Mínima', min_value=0, max_value=5, step=0.1, value=0)
+    min_rating = st.slider('Classificação Mínima', min_value=0.0, max_value=5.0, step=0.1, value=0.0)
     filtered_data = data[data['rating'] >= min_rating]
 
 # Filtro por Cor do Produto
@@ -53,7 +54,7 @@ with col3:
 
 # Filtro por Total de Inventário
 with col4:
-    min_inventory = st.slider('Inventário Mínimo', min_value=0, max_value=data['inventory_total'].max(), value=0)
+    min_inventory = st.slider('Inventário Mínimo', min_value=0, max_value=int(data['inventory_total'].max()), value=0)
     filtered_data = filtered_data[filtered_data['inventory_total'] >= min_inventory]
 
 st.header('Produtos Filtrados')
