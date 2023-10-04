@@ -7,7 +7,7 @@ st.header("Page 2")
 # Carrega os dados do arquivo CSV
 @st.cache  # Cache para melhor desempenho
 def load_data():
-    data = pd.read_csv('pages/pine_NY_2015.csv')
+    data = pd.read_csv('2020.csv')
     return data
 
 data = load_data()
