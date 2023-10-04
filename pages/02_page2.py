@@ -17,8 +17,8 @@ st.title('Dashboard de Produtos')
 
 # Exibir os dados em uma tabela
 st.subheader('Dados do CSV')
-#st.write(data)
-st.write(data.columns)
+st.write(data)
+#st.write(data.columns)
 
 # Opção para filtrar os dados por país
 countries = data['origin_country'].unique()
