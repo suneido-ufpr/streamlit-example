@@ -6,6 +6,5 @@ plotly
 seaborn
 Faker
 numpy
-math
 time
 csv
