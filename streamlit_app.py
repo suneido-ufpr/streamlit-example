@@ -21,81 +21,76 @@ import csv
 
 #Função para ler o arquivo CSV
 def read_file(filename):
-
-df = pd.read_csv(filename)
-
-return df
+    df = pd.read_csv(filename)
+    return df
 #Função para gerar dados aleatórios baseados nos padrões encontrados
 def generate_data():
-
-# Leitura do arquivo CSV
-
-data = read_file("RefundProcess.csv")
-
-# Identificação dos padrões presentes nas colunas
-status_patterns = []
-employee_patterns = []
-complete_timestamp_patterns = []
-channel_patterns = []
-
-for column in data.columns:
-    if column == 'Order Nr.':
-        continue
-
-    pattern = r''.join([random.choice(['[A-Z]'] + [random.choice(string.digits)] * (len(column)-1)) for _ in range(10)])
-    regexp = re.compile('^'+pattern+'$')
-    matches = list(filter(regexp.match, data['Order Nr.'].unique()))
-    status_patterns.append((column, pattern, len(matches)))
-    pattern = r'\w+'
-    regexp = re.compile('^'+pattern+'$')
-    matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan})))
-    employee_patterns.append((column, pattern, len(matches), matches))
-
-    pattern = r'\d{2}/\d{2}/\d{2}\s+\d{2}:\d{2}'
-    regexp = re.compile('^'+pattern+'$')
-    matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan}))[:math.ceil(len(data)/10)])
-    complete_timestamp_patterns.append((column, pattern, len(matches), matches))
-
-    pattern = r'\w+'
-    regexp = re.compile('^'+pattern+'$')
-    matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan}))[:math.ceil(len(data)/10)])
-    channel_patterns.append((column, pattern, len(matches), matches))
-
-print(status_patterns)
-print(employee_patterns)
-print(complete_timestamp_patterns)
-print(channel_patterns)
-
-# Geração de dados aleatórios
-new_rows = []
-for i in range(1000):
-    row = {}
-    for column, pattern, count, choices in status_patterns:
-        row[column] = fake.lexify(text=pattern)
-
-    for column, pattern, count, choices in employee_patterns:
-        row[column] = random.sample(choices, k=1)[0]
-
-    for column, pattern, count, choices in complete_timestamp_patterns:
-        row[column] = fake.date("%m/%d/%Y %H:%M", pattern="%m/%d/%y %H:%M")
-
-    for column, pattern, count, choices in channel_patterns:
-        row[column] = random.sample(choices, k=1)[0]
-
-    new_rows.append(row)
-
-# Criação de um DataFrame com os dados aleatórios
-new_df = pd.DataFrame(new_rows)
-
-# Adição dos dados ao dataframe original
-result = pd.concat([data, new_df], ignore_index=True)
-
-# Escrita do novo dataframe em um arquivo CSV
-timestamp = int(time.time())
-filename = f"RefundProcess_{str(timestamp)}.csv"
-result.to_csv(filename, index=False)
-
-return filename
+    # Leitura do arquivo CSV
+    data = read_file("RefundProcess.csv")
+    
+    # Identificação dos padrões presentes nas colunas
+    status_patterns = []
+    employee_patterns = []
+    complete_timestamp_patterns = []
+    channel_patterns = []
+    
+    for column in data.columns:
+        if column == 'Order Nr.':
+            continue
+        pattern = r''.join([random.choice(['[A-Z]'] + [random.choice(string.digits)] * (len(column)-1)) for _ in range(10)])
+        regexp = re.compile('^'+pattern+'$')
+        matches = list(filter(regexp.match, data['Order Nr.'].unique()))
+        status_patterns.append((column, pattern, len(matches)))
+        pattern = r'\w+'
+        regexp = re.compile('^'+pattern+'$')
+        matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan})))
+        employee_patterns.append((column, pattern, len(matches), matches))
+    
+        pattern = r'\d{2}/\d{2}/\d{2}\s+\d{2}:\d{2}'
+        regexp = re.compile('^'+pattern+'$')
+        matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan}))[:math.ceil(len(data)/10)])
+        complete_timestamp_patterns.append((column, pattern, len(matches), matches))
+    
+        pattern = r'\w+'
+        regexp = re.compile('^'+pattern+'$')
+        matches = list(set(list(filter(regexp.match, data[column].unique())).difference({np.nan}))[:math.ceil(len(data)/10)])
+        channel_patterns.append((column, pattern, len(matches), matches))
+    
+    print(status_patterns)
+    print(employee_patterns)
+    print(complete_timestamp_patterns)
+    print(channel_patterns)
+    
+    # Geração de dados aleatórios
+    new_rows = []
+    for i in range(1000):
+        row = {}
+        for column, pattern, count, choices in status_patterns:
+            row[column] = fake.lexify(text=pattern)
+    
+        for column, pattern, count, choices in employee_patterns:
+            row[column] = random.sample(choices, k=1)[0]
+    
+        for column, pattern, count, choices in complete_timestamp_patterns:
+            row[column] = fake.date("%m/%d/%Y %H:%M", pattern="%m/%d/%y %H:%M")
+    
+        for column, pattern, count, choices in channel_patterns:
+            row[column] = random.sample(choices, k=1)[0]
+    
+        new_rows.append(row)
+    
+    # Criação de um DataFrame com os dados aleatórios
+    new_df = pd.DataFrame(new_rows)
+    
+    # Adição dos dados ao dataframe original
+    result = pd.concat([data, new_df], ignore_index=True)
+    
+    # Escrita do novo dataframe em um arquivo CSV
+    timestamp = int(time.time())
+    filename = f"RefundProcess_{str(timestamp)}.csv"
+    result.to_csv(filename, index=False)
+    
+    return filename
 
 #Executando a função
 generate_data()
