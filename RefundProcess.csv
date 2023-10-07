@@ -1,0 +1,10 @@
+Order Nr.,Status,Employee,Complete Timestamp,Channel
+Case360,Order created,Resource 1,11/28/11 9:27,Callcenter
+Case360,Request signed L1,Resource 3,11/28/11 9:36,Callcenter
+Case360,Request signed L2,Resource 6,11/28/11 15:08,Callcenter
+Case360,Request signed L3,Resource 7,11/28/11 15:39,Callcenter
+Case360,Pick-up prepared,Resource 2,11/29/11 15:44,Callcenter
+Case360,Shipment via forwarding company,Resource 11,12/14/11 9:49,Callcenter
+Case360,Product received,Resource 12,12/19/11 15:18,Callcenter
+Case360,Payment issued,Resource 11,12/20/11 9:32,Callcenter
+Case360,Product ready for scrapping,Resource 13,12/28/11 8:47,Callcenter
