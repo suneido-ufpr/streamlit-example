@@ -4,3 +4,11 @@ streamlit
 matplotlib
 plotly
 seaborn
+Faker
+random
+string
+re
+numpy
+math
+time
+csv
